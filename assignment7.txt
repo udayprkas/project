@@ -17,7 +17,7 @@ class Cat implements Animals
 	}
 	public void eat()
 	{
-		System.out.println("cat eats fish");
+		System.out.println("cat eats fishes");
 	}
 }
 
@@ -29,7 +29,7 @@ class Dog implements Animals
 	}
 	public void eat()
 	{
-		System.out.println("DOG drinks");
+		System.out.println("DOG drinks milk");
 	}
 }
 
