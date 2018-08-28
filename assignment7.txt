@@ -1,0 +1,123 @@
+-------------------------------------------------------------------
+Sol 1:
+ANIMAL INTERFACE
+
+import java.util.Scanner;
+
+interface Animals
+{
+	void speak();
+	void eat();
+}
+class Cat implements Animals
+{
+	public void speak()
+	{
+		System.out.println("CAT meows");
+	}
+	public void eat()
+	{
+		System.out.println("cat eats fish");
+	}
+}
+
+class Dog implements Animals
+{
+	public void speak()
+	{
+		System.out.println("DOG barks");
+	}
+	public void eat()
+	{
+		System.out.println("DOG drinks");
+	}
+}
+
+public class Ani
+{
+	public static void main(String args[])
+	{
+		Dog obj = new Dog();
+		Cat obj1 = new Cat();
+		obj.speak();
+		obj.eat();
+		obj1.speak();
+		obj1.eat();
+	}
+}
+------------------------------------------------------
+
+SOL 2:
+
+ABSTRACT ANIMAL
+
+import java.util.Scanner;
+
+abstract class Animals
+{
+	String color,breed,name;
+	Animals(String breed, String name)
+	{
+		this.breed = breed;
+		this.name = name; 
+	}
+	abstract void eat(); 
+	public void speak()
+	{
+		System.out.println(name+" Speak"+" and his breed "+ breed);
+	}
+}
+class Dog extends Animals
+{
+	Dog(String breed, String name)
+	{
+		super(breed,name);
+	}
+	public void eat()
+	{
+		System.out.println(name+" eats ");
+	}
+}
+class Cat extends Animals
+{
+	Cat(String breed, String name)
+	{
+		super(breed,name);
+	}
+	public void eat()
+	{
+		System.out.println(name+" eats");
+	}
+}
+class absAni
+{
+	public static void main(String args[])
+	{
+		Dog d = new Dog("German Shephard", "Tommy");
+		Cat c = new Cat("Persian","lanchister");
+		d.speak();
+		d.eat();
+		c.speak();
+		c.eat();
+	}
+}
+
+----------------------------------------------------------------
+
+SOL 3:
+
+ADD TWO NSTRING AS NUMBER:
+
+import java.util.Scanner;
+public class Number
+{
+	public static void main(String args[])
+	{
+		String a,b;
+		Scanner sc = new Scanner(System.in);
+		a = sc.next();
+		b = sc.next();
+		int c = Integer.parseInt(a) + Integer.parseInt(b);
+		System.out.println("The sum of two string number "+c);
+	}
+}
